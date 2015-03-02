@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE8EA7A4-59A4-4545-8094-1D7A33D8CB19}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiamlerTP</RootNamespace>
+    <AssemblyName>DiamlerTP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AddAdditionalInfo.aspx" />
+    <Content Include="AddClient.aspx" />
+    <Content Include="AddShipmentContactPerson.aspx" />
+    <Content Include="AddShipmentVehicle.aspx" />
+    <Content Include="AirAndShipMethodAddOrder.aspx" />
+    <Content Include="AirAndShipMethodAddShipData.aspx" />
+    <Content Include="AirAndShipMethodEditOrder.aspx" />
+    <Content Include="AirAndShipMethodEditShipData.aspx" />
+    <Content Include="AirAndShipMethodViewOrder.aspx" />
+    <Content Include="AirAndShipMethodViewShipData.aspx" />
+    <Content Include="App_Data\Diamlerdb.mdf" />
+    <Content Include="App_Data\Diamlerdb_log.ldf">
+      <DependentUpon>Diamlerdb.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CoreDataAddEmployeeInfo.aspx" />
+    <Content Include="CoreDataAddLoadAddress.aspx" />
+    <Content Include="CoreDataAddShipment.aspx" />
+    <Content Include="CoreDataAddVehicleData.aspx" />
+    <Content Include="CoreDataEditEmployeeInfo.aspx" />
+    <Content Include="CoreDataEditLoadAddress.aspx" />
+    <Content Include="CoreDataEditShipment.aspx" />
+    <Content Include="CoreDataViewVehicleData.aspx" />
+    <Content Include="EditAdditionalInfo.aspx" />
+    <Content Include="EditClient.aspx" />
+    <Content Include="EditShipmentContactPerson.aspx" />
+    <Content Include="EditShipmentVehicle.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmReportCall.aspx" />
+    <Content Include="frmReportViewer.aspx" />
+    <Content Include="Ladeadresse.aspx" />
+    <Content Include="Loginuser.aspx" />
+    <Content Include="NeuAuftrag.aspx" />
+    <Content Include="OutputAuftragabber.aspx" />
+    <Content Include="OutputEmployeeInfo.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="DatasetSP.xsc">
+      <DependentUpon>DatasetSP.xsd</DependentUpon>
+    </Content>
+    <None Include="DatasetSP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetSP1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="DatasetSP.xss">
+      <DependentUpon>DatasetSP.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Sachbearbeiter1.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="Spedition.aspx" />
+    <Content Include="StatisticsViewEntryOrder.aspx" />
+    <Content Include="StatisticsViewShipmentOrder.aspx" />
+    <Content Include="TransportAuftragDetails.aspx" />
+    <Content Include="TruckMethodAddCarrageNotice.aspx" />
+    <Content Include="TruckMethodAddCarrageNoticeReturnTransport.aspx" />
+    <Content Include="TruckMethodAddInsurance.aspx" />
+    <Content Include="TruckMethodAddOrder.aspx" />
+    <Content Include="TruckMethodAddShipmentSelection.aspx" />
+    <Content Include="TruckMethodEditCarrageNotice.aspx" />
+    <Content Include="TruckMethodEditCarrageNoticeReturnTransport.aspx" />
+    <Content Include="TruckMethodEditInsurance.aspx" />
+    <Content Include="TruckMethodEditOrder.aspx" />
+    <Content Include="TruckMethodEditShipmentSelection.aspx" />
+    <Content Include="TruckMethodViewCarrageNotice.aspx" />
+    <Content Include="TruckMethodViewCarrageNoticeReturnTransport.aspx" />
+    <Content Include="TruckMethodViewInsurance.aspx" />
+    <Content Include="TruckMethodViewOrder.aspx" />
+    <Content Include="TruckMethodViewShipmentSelection.aspx" />
+    <Content Include="TruckMethodViewTitleInfo.aspx" />
+    <Content Include="ViewAdditionalInfo.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAdditionalInfo.aspx.cs">
+      <DependentUpon>AddAdditionalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddAdditionalInfo.aspx.designer.cs">
+      <DependentUpon>AddAdditionalInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddClient.aspx.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddClient.aspx.designer.cs">
+      <DependentUpon>AddClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddShipmentContactPerson.aspx.cs">
+      <DependentUpon>AddShipmentContactPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShipmentContactPerson.aspx.designer.cs">
+      <DependentUpon>AddShipmentContactPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddShipmentVehicle.aspx.cs">
+      <DependentUpon>AddShipmentVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShipmentVehicle.aspx.designer.cs">
+      <DependentUpon>AddShipmentVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodAddOrder.aspx.cs">
+      <DependentUpon>AirAndShipMethodAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodAddOrder.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodAddShipData.aspx.cs">
+      <DependentUpon>AirAndShipMethodAddShipData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodAddShipData.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodAddShipData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodEditOrder.aspx.cs">
+      <DependentUpon>AirAndShipMethodEditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodEditOrder.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodEditOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodEditShipData.aspx.cs">
+      <DependentUpon>AirAndShipMethodEditShipData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodEditShipData.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodEditShipData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodViewOrder.aspx.cs">
+      <DependentUpon>AirAndShipMethodViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodViewOrder.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodViewOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirAndShipMethodViewShipData.aspx.cs">
+      <DependentUpon>AirAndShipMethodViewShipData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirAndShipMethodViewShipData.aspx.designer.cs">
+      <DependentUpon>AirAndShipMethodViewShipData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CMR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataAddEmployeeInfo.aspx.cs">
+      <DependentUpon>CoreDataAddEmployeeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataAddEmployeeInfo.aspx.designer.cs">
+      <DependentUpon>CoreDataAddEmployeeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataAddLoadAddress.aspx.cs">
+      <DependentUpon>CoreDataAddLoadAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataAddLoadAddress.aspx.designer.cs">
+      <DependentUpon>CoreDataAddLoadAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataAddShipment.aspx.cs">
+      <DependentUpon>CoreDataAddShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataAddShipment.aspx.designer.cs">
+      <DependentUpon>CoreDataAddShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataAddVehicleData.aspx.cs">
+      <DependentUpon>CoreDataAddVehicleData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataAddVehicleData.aspx.designer.cs">
+      <DependentUpon>CoreDataAddVehicleData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataEditEmployeeInfo.aspx.cs">
+      <DependentUpon>CoreDataEditEmployeeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataEditEmployeeInfo.aspx.designer.cs">
+      <DependentUpon>CoreDataEditEmployeeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataEditLoadAddress.aspx.cs">
+      <DependentUpon>CoreDataEditLoadAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataEditLoadAddress.aspx.designer.cs">
+      <DependentUpon>CoreDataEditLoadAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataEditShipment.aspx.cs">
+      <DependentUpon>CoreDataEditShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataEditShipment.aspx.designer.cs">
+      <DependentUpon>CoreDataEditShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoreDataViewVehicleData.aspx.cs">
+      <DependentUpon>CoreDataViewVehicleData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoreDataViewVehicleData.aspx.designer.cs">
+      <DependentUpon>CoreDataViewVehicleData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\DataProvider\LoginDataProvider.cs" />
+    <Compile Include="DAL\DataProvider\OrderAdressDataProvider.cs" />
+    <Compile Include="DAL\Model\Login.cs" />
+    <Compile Include="DAL\Model\OrderAdress.cs" />
+    <Compile Include="DAL\Model\Status.cs" />
+    <Compile Include="DAL\DataProvider\CountryListDataProvider.cs" />
+    <Compile Include="DAL\DataProvider\LoadAdressDataProvider.cs" />
+    <Compile Include="DAL\Model\LoadAdress.cs" />
+    <Compile Include="DAL\Model\CountryList.cs" />
+    <Compile Include="DAL\DataProvider\ContactPersonDataProvider.cs" />
+    <Compile Include="DAL\Model\ContactPerson.cs" />
+    <Compile Include="DAL\DataProvider\ClientDataProvider.cs" />
+    <Compile Include="DAL\Model\Client.cs" />
+    <Compile Include="DAL\DataProvider\AirShipDetailDataProvider.cs" />
+    <Compile Include="DAL\DataProvider\AirStatisticsDataProvider.cs" />
+    <Compile Include="DAL\Model\AirStatistics.cs" />
+    <Compile Include="DAL\Model\AirShipDetail.cs" />
+    <Compile Include="DAL\DataProvider\AdditionalInfoDataProvider.cs" />
+    <Compile Include="DAL\Model\AdditionalInfo.cs" />
+    <Compile Include="DAL\DataProvider\OrderDetailsDataProvider.cs" />
+    <Compile Include="DAL\Model\OrderDetails.cs" />
+    <Compile Include="DAL\DataProvider\ShippmentContactPersonDataProvider.cs" />
+    <Compile Include="DAL\Model\ShippmentContactPerson.cs" />
+    <Compile Include="DAL\DataProvider\ShippmentDataProvider.cs" />
+    <Compile Include="DAL\Model\Shippment.cs" />
+    <Compile Include="DAL\DataProvider\ShippmentStatisticsDataProvider.cs" />
+    <Compile Include="DAL\Model\ShippmentStatistics.cs" />
+    <Compile Include="DAL\DataProvider\ShippmentVehicleDataProvider.cs" />
+    <Compile Include="DAL\Model\ShippmentVehicle.cs" />
+    <Compile Include="DAL\DataProvider\EmployeeInfoDataProvider.cs" />
+    <Compile Include="DAL\Model\EmployeeInfo.cs" />
+    <Compile Include="DAL\DataProvider\OrderDataProvider.cs" />
+    <Compile Include="DAL\Model\Order.cs" />
+    <Compile Include="DAL\QueryCreater.cs" />
+    <Compile Include="DAL\Model\ShippingMethod.cs" />
+    <Compile Include="DAL\DataProvider\ShippingMethodDataProvider.cs" />
+    <Compile Include="DAL\DataProvider\StatusDataProvider.cs" />
+    <Compile Include="DAL\DataProvider\TitleDataProvider.cs" />
+    <Compile Include="DAL\Model\Title.cs" />
+    <Compile Include="DAL\DataProvider\TransportWayDataProvider.cs" />
+    <Compile Include="DAL\Model\TransportWay.cs" />
+    <Compile Include="DAL\DataProvider\VehicleDimensionDataProvider.cs" />
+    <Compile Include="DAL\Model\VehicleDimension.cs" />
+    <Compile Include="DatasetSP.cs">
+      <DependentUpon>DatasetSP.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatasetSP.designer.cs">
+      <DependentUpon>DatasetSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetSP1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetSP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditAdditionalInfo.aspx.cs">
+      <DependentUpon>EditAdditionalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditAdditionalInfo.aspx.designer.cs">
+      <DependentUpon>EditAdditionalInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditClient.aspx.cs">
+      <DependentUpon>EditClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditClient.aspx.designer.cs">
+      <DependentUpon>EditClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditShipmentContactPerson.aspx.cs">
+      <DependentUpon>EditShipmentContactPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditShipmentContactPerson.aspx.designer.cs">
+      <DependentUpon>EditShipmentContactPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditShipmentVehicle.aspx.cs">
+      <DependentUpon>EditShipmentVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditShipmentVehicle.aspx.designer.cs">
+      <DependentUpon>EditShipmentVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCall.aspx.cs">
+      <DependentUpon>frmReportCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportCall.aspx.designer.cs">
+      <DependentUpon>frmReportCall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer.aspx.cs">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.aspx.designer.cs">
+      <DependentUpon>frmReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Insurance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ladeadresse.aspx.cs">
+      <DependentUpon>Ladeadresse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ladeadresse.aspx.designer.cs">
+      <DependentUpon>Ladeadresse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Layout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Layout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Loginuser.aspx.cs">
+      <DependentUpon>Loginuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loginuser.aspx.designer.cs">
+      <DependentUpon>Loginuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NeuAuftrag.aspx.cs">
+      <DependentUpon>NeuAuftrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NeuAuftrag.aspx.designer.cs">
+      <DependentUpon>NeuAuftrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OneWayRequest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OneWayRequest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OutputAuftragabber.aspx.cs">
+      <DependentUpon>OutputAuftragabber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutputAuftragabber.aspx.designer.cs">
+      <DependentUpon>OutputAuftragabber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OutputEmployeeInfo.aspx.cs">
+      <DependentUpon>OutputEmployeeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OutputEmployeeInfo.aspx.designer.cs">
+      <DependentUpon>OutputEmployeeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportHelper.cs" />
+    <Compile Include="Sachbearbeiter1.aspx.cs">
+      <DependentUpon>Sachbearbeiter1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sachbearbeiter1.aspx.designer.cs">
+      <DependentUpon>Sachbearbeiter1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Spedition.aspx.cs">
+      <DependentUpon>Spedition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spedition.aspx.designer.cs">
+      <DependentUpon>Spedition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsViewEntryOrder.aspx.cs">
+      <DependentUpon>StatisticsViewEntryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatisticsViewEntryOrder.aspx.designer.cs">
+      <DependentUpon>StatisticsViewEntryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsViewShipmentOrder.aspx.cs">
+      <DependentUpon>StatisticsViewShipmentOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StatisticsViewShipmentOrder.aspx.designer.cs">
+      <DependentUpon>StatisticsViewShipmentOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transport Order Address.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Transport Order Address.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transport Order Address1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Transport Order Address1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransportAuftragDetails.aspx.cs">
+      <DependentUpon>TransportAuftragDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportAuftragDetails.aspx.designer.cs">
+      <DependentUpon>TransportAuftragDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodAddCarrageNotice.aspx.cs">
+      <DependentUpon>TruckMethodAddCarrageNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodAddCarrageNotice.aspx.designer.cs">
+      <DependentUpon>TruckMethodAddCarrageNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodAddCarrageNoticeReturnTransport.aspx.cs">
+      <DependentUpon>TruckMethodAddCarrageNoticeReturnTransport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodAddCarrageNoticeReturnTransport.aspx.designer.cs">
+      <DependentUpon>TruckMethodAddCarrageNoticeReturnTransport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodAddInsurance.aspx.cs">
+      <DependentUpon>TruckMethodAddInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodAddInsurance.aspx.designer.cs">
+      <DependentUpon>TruckMethodAddInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodAddOrder.aspx.cs">
+      <DependentUpon>TruckMethodAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodAddOrder.aspx.designer.cs">
+      <DependentUpon>TruckMethodAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodAddShipmentSelection.aspx.cs">
+      <DependentUpon>TruckMethodAddShipmentSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodAddShipmentSelection.aspx.designer.cs">
+      <DependentUpon>TruckMethodAddShipmentSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodEditCarrageNotice.aspx.cs">
+      <DependentUpon>TruckMethodEditCarrageNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodEditCarrageNotice.aspx.designer.cs">
+      <DependentUpon>TruckMethodEditCarrageNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodEditCarrageNoticeReturnTransport.aspx.cs">
+      <DependentUpon>TruckMethodEditCarrageNoticeReturnTransport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodEditCarrageNoticeReturnTransport.aspx.designer.cs">
+      <DependentUpon>TruckMethodEditCarrageNoticeReturnTransport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodEditInsurance.aspx.cs">
+      <DependentUpon>TruckMethodEditInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodEditInsurance.aspx.designer.cs">
+      <DependentUpon>TruckMethodEditInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodEditOrder.aspx.cs">
+      <DependentUpon>TruckMethodEditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodEditOrder.aspx.designer.cs">
+      <DependentUpon>TruckMethodEditOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodEditShipmentSelection.aspx.cs">
+      <DependentUpon>TruckMethodEditShipmentSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodEditShipmentSelection.aspx.designer.cs">
+      <DependentUpon>TruckMethodEditShipmentSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewCarrageNotice.aspx.cs">
+      <DependentUpon>TruckMethodViewCarrageNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewCarrageNotice.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewCarrageNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewCarrageNoticeReturnTransport.aspx.cs">
+      <DependentUpon>TruckMethodViewCarrageNoticeReturnTransport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewCarrageNoticeReturnTransport.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewCarrageNoticeReturnTransport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewInsurance.aspx.cs">
+      <DependentUpon>TruckMethodViewInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewInsurance.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewOrder.aspx.cs">
+      <DependentUpon>TruckMethodViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewOrder.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewShipmentSelection.aspx.cs">
+      <DependentUpon>TruckMethodViewShipmentSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewShipmentSelection.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewShipmentSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruckMethodViewTitleInfo.aspx.cs">
+      <DependentUpon>TruckMethodViewTitleInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruckMethodViewTitleInfo.aspx.designer.cs">
+      <DependentUpon>TruckMethodViewTitleInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TwoWay.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwoWay.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewAdditionalInfo.aspx.cs">
+      <DependentUpon>ViewAdditionalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAdditionalInfo.aspx.designer.cs">
+      <DependentUpon>ViewAdditionalInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CMR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CMR.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Insurance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Layout.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneWayRequest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OneWayRequest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transport Order Address.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Transport Order Address.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transport Order Address1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Transport Order Address1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TwoWay.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TwoWay.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26280</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26280/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

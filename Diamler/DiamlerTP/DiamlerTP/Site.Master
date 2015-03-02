@@ -1,0 +1,288 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DiamlerTP.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Transportplanung</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#270b0b">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" runat="server" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="#"></a>
+                </div>
+             <%--   <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/TransportAuftragDetails.aspx">Auftragerfassung</a></li>
+                        <li><a runat="server" href="~/Sachbearbeiter1.aspx">Sachbearbeiter</a></li>
+                        <li><a runat="server" href="~/NeuAuftrag.aspx">Neu Auftraggeber</a></li>
+                        <li><a runat="server" href="~/Ladeadresse.aspx">Neu Beladeadresse</a></li>
+                        <li><a runat="server" href="~/Spedition.aspx">Speditionen</a></li>
+                        <li class="dropdown ">
+                            <a href="#" data-toggle="dropdown" runat="server" class="dropdown-toggle">Bentuzer<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="#">Benutzer</a></li>
+                                <li><a runat="server" href="#">Einstellung</a></li>
+                                <li class="divider"></li>
+                                <li><a runat="server" href="~/Login.aspx">Abmeldung</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>--%>
+             
+                
+                <ul class="nav navbar-nav">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Order<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="row" style="width:600px;">
+                    <ul class="list-unstyled col-md-4" style="margin:10px;">
+                        <li style="font-size:large; color:cadetblue;">Truck Method</li>
+                        <li class="divider"></li>
+                        <li style="color:black;"><b>Create Order</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddOrder.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditOrder.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>                            
+                        </li>    
+                        <li class="divider"></li> 
+                        <li style="color:black;"><b>Shipment selection</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddShipmentSelection.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditShipmentSelection.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>
+                        <li class="divider"></li>     
+                        <li style="color:black;"><b>Carrage Notice</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddCarrageNotice.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditCarrageNotice.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>  
+                        <li class="divider"></li>                                              
+                        <li style="color:black;"><b>Carrage Notice Return Transport</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddCarrageNoticeReturnTransport.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditCarrageNoticeReturnTransport.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>                            
+                        <li style="color:black;"><b>Insurance</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddInsurance.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditInsurance.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>                            
+                        <li style="color:black;"><b>Title Info</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodViewTitleInfo.aspx">View</a></li>                        
+                                <br /><br />
+                            </ul>
+                        </li>          
+                        <li class="divider"></li>                                      
+                    </ul>
+                                        
+                   
+                     <ul class="list-unstyled col-md-4" style="margin:10px;">
+                        <li style="font-size:large; color:cadetblue;">Air and Ship Method</li>
+                        <li class="divider"></li>
+                        <li style="color:black;"><b>Create Order</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodAddOrder.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodEditOrder.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>                        
+                         <li class="divider"></li>
+                        <li style="color:black;"><b>Shipment data to excel</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodAddShipData.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodEditShipData.aspx">Edit</a></li>
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br /><br /><br />
+                            </ul>
+                        </li>                     
+                         <li class="divider"></li>        
+                    </ul>
+
+                    <ul class="list-unstyled col-md-4" style="margin:10px; border:groove;">
+                        <li style="color:darkred;"><b>Client</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AddClient.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="EditClient.aspx">Edit</a></li>
+                                <br /><br />
+                            </ul>
+                        </li>                             
+                        <li style="color:darkred;"><b>Additional Info</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AddAdditionalInfo.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="EditAdditionalInfo.aspx">Edit</a></li>                                
+                                <br /><br />
+                            </ul>
+                        </li>
+                        <li style="color:darkred;"><b>Shipment Contact Person</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AddShipmentContactPerson.aspx">Add</a></li>                                                      
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="EditShipmentContactPerson.aspx">Edit</a></li>                                                      
+                                <br /><br />
+                            </ul>
+                        </li>
+                        <li style="color:darkred;"><b>Shipment Vehicle</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="AddShipmentVehicle.aspx">Add</a></li>                                                      
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="EditShipmentVehicle.aspx">Edit</a></li>                                                      
+                            </ul>
+                        </li>                             
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+                    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Statistic<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="row" style="width:500px;">
+                    <ul class="list-unstyled col-md-4" style="margin:10px;">                        
+                        <li style="color:black;"><b>Shipment Order</b>
+                            <ul>                                
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">Add</a></li>--%>                                                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="StatisticsViewShipmentOrder.aspx">View</a></li><br /><br />
+                            </ul>
+                        </li>                     
+                        <li class="divider"></li>   
+                        <li style="color:black;"><b>Entry Order</b>
+                            <ul>                                
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">Add</a></li>--%>                                                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="StatisticsViewEntryOrder.aspx">View</a></li><br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>                                                   
+                    </ul>                  
+                </div>
+            </li>
+        </ul>
+    </li>
+
+                    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Data<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li>
+                <div class="row" style="width:500px;">
+                    <ul class="list-unstyled col-md-4" style="margin:10px;">                        
+                        <li style="color:black;"><b>Employee Info</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataAddEmployeeInfo.aspx">Add</a></li>                                                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataEditEmployeeInfo.aspx">Edit</a></li>                                                        
+                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>    
+                        <li style="color:black;"><b>Shipment</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataAddShipment.aspx">Add</a></li>                                                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataEditShipment.aspx">Edit</a></li>                                                        
+                                <br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>                               
+                        <li style="color:black;"><b>Vehicle Data</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataAddVehicleData.aspx">Add</a></li>                                                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataViewVehicleData.aspx">View</a></li>                                                        
+                                <br /><br />
+                            </ul>
+                        </li>                    
+                        <li class="divider"></li>                                                                    
+                        <li style="color:black;"><b>Load Address</b>
+                            <ul>                                
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataAddLoadAddress.aspx">Add</a></li>                        
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataEditLoadAddress.aspx">Edit</a></li>                                                                             
+                                <br /><br />
+                            </ul>
+                        </li>                                                
+                        <li class="divider"></li>                                 
+                    </ul>                  
+                </div>
+            </li>
+        </ul>
+    </li>
+                    
+</ul>           
+              <ul class="nav navbar-nav pull-right">
+                   <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" runat="server" class="dropdown-toggle">Account<b class="caret"></b></a>
+                            <ul class="dropdown-menu">                                
+                                <li><a runat="server" href="Loginuser.aspx">Login</a></li>
+                            </ul>
+                        </li>
+                  </ul>
+                                             
+            </div>
+        </div>
+        <div class="container body-content" style="background-color:lightyellow;">
+            
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+                        </ContentTemplate>
+                </asp:UpdatePanel>
+            <hr />
+            <footer>
+                <nav class="navbar navbar-fixed-bottom" style="background-color:#270b0b">
+                    <div class="col-lg-5 text-center">
+                    <span style="font-size:11px; color:#999;" class="glyphicon glyphicon-copyright-mark"> <strong style="font-family:'Century Gothic'">2015-DaimlerAG | Transportplanung</strong></span>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
