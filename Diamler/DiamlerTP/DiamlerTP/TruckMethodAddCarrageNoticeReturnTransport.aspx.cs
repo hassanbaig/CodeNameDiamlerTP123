@@ -13,5 +13,11 @@ namespace DiamlerTP
         {
 
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            string textVal = txtCMR.Text;
+            Response.Redirect("frmReportViewer.aspx?ID=" + textVal + "&ReportType=" + 6);
+        }
     }
 }

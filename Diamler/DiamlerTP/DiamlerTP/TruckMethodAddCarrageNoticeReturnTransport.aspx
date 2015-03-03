@@ -46,7 +46,9 @@
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
                 <div>
-                    <asp:Button ID="Button4" runat="server" Text="CMR Open" />
+                    <asp:TextBox ID="txtCMR" runat="server"></asp:TextBox>
+
+                    <asp:Button ID="Button4" runat="server" Text="CMR Open" OnClick="Button4_Click" />
                 </div>
             </asp:TableCell>                        
         </asp:TableRow>
