@@ -42,7 +42,7 @@ namespace DiamlerTP.DAL
                     IsLoad = Convert.ToBoolean(dataRow["IsLoad"].ToString())
                 }).ToList();
         }
-
+       
         public object Add(int orderId, long loadAddress, long contactPerson1, long contactPerson2, DateTime date, string type, int isLoad)
         {
             object orderAddressId = 0;
@@ -57,6 +57,22 @@ namespace DiamlerTP.DAL
             {
             }
             return orderAddressId;
+        }
+
+        public object Add(int orderId, long loadAddress, DateTime date)
+        {
+            object oId = 0;
+            try
+            {
+                string[] arrColumn = { "OrderId", "LoadAdress", "Date" };
+                string[] arrValue = { "" + orderId + "", "" + loadAddress + "", "'" + date + "'" };
+
+                oId = _dataProvider.ManipulateData(QueryCreater.InsertQuery("T_OrderAdress", arrColumn, arrValue));
+            }
+            catch (Exception ex)
+            {
+            }
+            return oId;
         }
     }
 }

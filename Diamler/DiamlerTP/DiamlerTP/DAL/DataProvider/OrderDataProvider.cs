@@ -165,6 +165,21 @@ namespace DiamlerTP.DAL
             }
             return orderId;
         }
+        public object Update(int orderId, DateTime entryDate, int employeeInfo, int shippingMethod, string noOfVehicles, int client,int shipment, string mainRefrence, string internalInfo, string specialInstruction)
+        {
+            object oId = 0;
+            try
+            {
+                string[] arrColumn = { "EntryDate", "EmployeeInfo", "ShippingMethod", "VechicleNo", "Client", "Shippment", "MainReceipt", "InternalInfo", "SpecialInstruction" };
+                string[] arrValue = { "'" + entryDate + "'", "" + employeeInfo + "", "" + shippingMethod + "", "'" + noOfVehicles + "'", "" + client + "", "" + shipment + "", "'" + mainRefrence + "'", "'" + internalInfo + "'", "'" + specialInstruction + "'" };
+
+                oId = _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_Order", arrColumn, arrValue, orderId));
+            }
+            catch (Exception ex)
+            {
+            }
+            return oId;
+        }
         public object Update(int orderId, DateTime entryDate, int employeeInfo, int shippingMethod, string noOfVehicles, int client, string mainRefrence, string receiptInfo, string internalInfo, string specialInstruction)
         {
             object oId = 0; 
@@ -189,6 +204,36 @@ namespace DiamlerTP.DAL
                 string[] arrValue = { "" + shipment + "", "" + shipmentContactPerson + "", "'" + destinationPrice + "'", "'" + returnPrice + "'" };
 
                oId = _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_Order", arrColumn, arrValue, orderId));
+            }
+            catch (Exception ex)
+            {
+            }
+            return oId;
+        }
+        public object Update(int orderId, string destinationPrice, string returnPrice)
+        {
+            object oId = 0;
+            try
+            {
+                string[] arrColumn = { "DestinationPrice", "ReturnPrice" };
+                string[] arrValue = { "'" + destinationPrice + "'", "'" + returnPrice + "'" };
+
+                oId = _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_Order", arrColumn, arrValue, orderId));
+            }
+            catch (Exception ex)
+            {
+            }
+            return oId;
+        }
+        public object Update(int orderId, string noOfVehicles)
+        {
+            object oId = 0;
+            try
+            {
+                string[] arrColumn = { "VechicleNo"};
+                string[] arrValue = { "'" + noOfVehicles + "'"};
+
+                oId = _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_Order", arrColumn, arrValue, orderId));
             }
             catch (Exception ex)
             {

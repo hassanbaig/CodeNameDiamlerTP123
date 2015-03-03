@@ -135,8 +135,18 @@
     <asp:GridView ID="gvOrderDetails" runat="server" AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField DataField="OID" HeaderText="OrderID" />
-            <asp:BoundField DataField="V" HeaderText="VehicleType" />
-            <asp:BoundField DataField="W" HeaderText="TransportWay" />
+            <asp:BoundField DataField="DesFin" HeaderText="DesignatedFinasNo" />
+            <asp:BoundField DataField="NumPla" HeaderText="NumberPlate" />
+            <asp:BoundField DataField="ChaNo" HeaderText="ChassisNo" />
+            <asp:BoundField DataField="Len" HeaderText="Length" />
+            <asp:BoundField DataField="Wid" HeaderText="Width" />
+            <asp:BoundField DataField="Hei" HeaderText="Height" />
+            <asp:BoundField DataField="Wei" HeaderText="Weight" />
+            <asp:BoundField DataField="Pri" HeaderText="Price" />
+            <asp:BoundField DataField="Rec" HeaderText="Receipt" />
+            <asp:BoundField DataField="Mod" HeaderText="Model" />
+            <asp:BoundField DataField="TruTyp" HeaderText="TruckType" />
+            <asp:BoundField DataField="TraWay" HeaderText="TransportWay" />         
         </Columns>
     </asp:GridView>
         

@@ -39,11 +39,10 @@ namespace DiamlerTP
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            orderDataProvider.Update(Convert.ToInt32(ddlOrder.SelectedValue),Convert.ToInt32(ddlShipmentId.SelectedValue),Convert.ToInt32(ddlShipmentContactPerson.SelectedValue),txtDestinationPrice.Text,txtReturnPrice.Text);
-            
-                ClearControls();
-                lblResponseMessage.Text = "Record has been updated successfully.";
-            
+            orderDataProvider.Update(Convert.ToInt32(ddlOrder.SelectedValue), Convert.ToInt32(ddlShipmentId.SelectedValue), Convert.ToInt32(ddlShipmentContactPerson.SelectedValue), txtDestinationPrice.Text, txtReturnPrice.Text);
+
+            ClearControls();
+            lblResponseMessage.Text = "Record has been updated successfully.";
         }
 
         protected void btnTransportOrderAddressSame_Click(object sender, EventArgs e)
