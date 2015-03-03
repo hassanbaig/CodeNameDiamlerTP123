@@ -82,7 +82,7 @@
                             <ul>                                
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddOrder.aspx">Add</a></li>                        
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditOrder.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                               <br /><br />
                             </ul>                            
                         </li>    
                         <li class="divider"></li> 
@@ -90,31 +90,28 @@
                             <ul>                                
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddShipmentSelection.aspx">Add</a></li>                        
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditShipmentSelection.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                               <br /><br />
                             </ul>
                         </li>
                         <li class="divider"></li>     
                         <li style="color:black;"><b>Carrage Notice</b>
                             <ul>                                
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddCarrageNotice.aspx">Add</a></li>                        
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditCarrageNotice.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodViewCarrageNotice.aspx">View</a></li>                        
+                              <br /><br />
                             </ul>
                         </li>  
                         <li class="divider"></li>                                              
                         <li style="color:black;"><b>Carrage Notice Return Transport</b>
                             <ul>                                
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddCarrageNoticeReturnTransport.aspx">Add</a></li>                        
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditCarrageNoticeReturnTransport.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodViewCarrageNoticeReturnTransport.aspx">View</a></li>                        
+                              <br /><br />
                             </ul>
                         </li>                    
                         <li class="divider"></li>                            
                         <li style="color:black;"><b>Insurance</b>
                             <ul>                                
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodAddInsurance.aspx">Add</a></li>                        
-                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodEditInsurance.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                                <li class="list-unstyled col-md-2"><a style="color:orange;" href="TruckMethodViewInsurance.aspx">View</a></li>                        
+                             <br /><br />
                             </ul>
                         </li>                    
                         <li class="divider"></li>                            
@@ -135,15 +132,15 @@
                             <ul>                                
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodAddOrder.aspx">Add</a></li>                        
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodEditOrder.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                               <br /><br />
                             </ul>
                         </li>                        
                          <li class="divider"></li>
-                        <li style="color:black;"><b>Shipment data to excel</b>
+                        <li style="color:black;"><b>Shipment Data</b>
                             <ul>                                
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodAddShipData.aspx">Add</a></li>                        
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="AirAndShipMethodEditShipData.aspx">Edit</a></li>
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br /><br /><br />
+                               <br /><br /><br /><br />
                             </ul>
                         </li>                     
                          <li class="divider"></li>        
@@ -189,15 +186,13 @@
                 <div class="row" style="width:500px;">
                     <ul class="list-unstyled col-md-4" style="margin:10px;">                        
                         <li style="color:black;"><b>Shipment Order</b>
-                            <ul>                                
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">Add</a></li>--%>                                                        
+                            <ul>                                                                              
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="StatisticsViewShipmentOrder.aspx">View</a></li><br /><br />
                             </ul>
                         </li>                     
                         <li class="divider"></li>   
                         <li style="color:black;"><b>Entry Order</b>
-                            <ul>                                
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">Add</a></li>--%>                                                        
+                            <ul>                                                             
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="StatisticsViewEntryOrder.aspx">View</a></li><br /><br />
                             </ul>
                         </li>                    
@@ -218,7 +213,7 @@
                             <ul>                                
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataAddEmployeeInfo.aspx">Add</a></li>                                                        
                                 <li class="list-unstyled col-md-2"><a style="color:orange;" href="CoreDataEditEmployeeInfo.aspx">Edit</a></li>                                                        
-                                <%--<li class="list-unstyled col-md-2"><a style="color:orange;" href="#">View</a></li>--%><br /><br />
+                              <br /><br />
                             </ul>
                         </li>                    
                         <li class="divider"></li>    

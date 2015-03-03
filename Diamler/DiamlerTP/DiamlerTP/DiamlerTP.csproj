@@ -118,8 +118,6 @@
     <Content Include="AirAndShipMethodAddShipData.aspx" />
     <Content Include="AirAndShipMethodEditOrder.aspx" />
     <Content Include="AirAndShipMethodEditShipData.aspx" />
-    <Content Include="AirAndShipMethodViewOrder.aspx" />
-    <Content Include="AirAndShipMethodViewShipData.aspx" />
     <Content Include="App_Data\Diamlerdb.mdf" />
     <Content Include="App_Data\Diamlerdb_log.ldf">
       <DependentUpon>Diamlerdb.mdf</DependentUpon>
@@ -202,21 +200,13 @@
     <Content Include="StatisticsViewEntryOrder.aspx" />
     <Content Include="StatisticsViewShipmentOrder.aspx" />
     <Content Include="TransportAuftragDetails.aspx" />
-    <Content Include="TruckMethodAddCarrageNotice.aspx" />
-    <Content Include="TruckMethodAddCarrageNoticeReturnTransport.aspx" />
-    <Content Include="TruckMethodAddInsurance.aspx" />
     <Content Include="TruckMethodAddOrder.aspx" />
     <Content Include="TruckMethodAddShipmentSelection.aspx" />
-    <Content Include="TruckMethodEditCarrageNotice.aspx" />
-    <Content Include="TruckMethodEditCarrageNoticeReturnTransport.aspx" />
-    <Content Include="TruckMethodEditInsurance.aspx" />
     <Content Include="TruckMethodEditOrder.aspx" />
     <Content Include="TruckMethodEditShipmentSelection.aspx" />
     <Content Include="TruckMethodViewCarrageNotice.aspx" />
     <Content Include="TruckMethodViewCarrageNoticeReturnTransport.aspx" />
     <Content Include="TruckMethodViewInsurance.aspx" />
-    <Content Include="TruckMethodViewOrder.aspx" />
-    <Content Include="TruckMethodViewShipmentSelection.aspx" />
     <Content Include="TruckMethodViewTitleInfo.aspx" />
     <Content Include="ViewAdditionalInfo.aspx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -287,20 +277,6 @@
     </Compile>
     <Compile Include="AirAndShipMethodEditShipData.aspx.designer.cs">
       <DependentUpon>AirAndShipMethodEditShipData.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AirAndShipMethodViewOrder.aspx.cs">
-      <DependentUpon>AirAndShipMethodViewOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AirAndShipMethodViewOrder.aspx.designer.cs">
-      <DependentUpon>AirAndShipMethodViewOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AirAndShipMethodViewShipData.aspx.cs">
-      <DependentUpon>AirAndShipMethodViewShipData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AirAndShipMethodViewShipData.aspx.designer.cs">
-      <DependentUpon>AirAndShipMethodViewShipData.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -627,27 +603,6 @@
     <Compile Include="TransportAuftragDetails.aspx.designer.cs">
       <DependentUpon>TransportAuftragDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TruckMethodAddCarrageNotice.aspx.cs">
-      <DependentUpon>TruckMethodAddCarrageNotice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodAddCarrageNotice.aspx.designer.cs">
-      <DependentUpon>TruckMethodAddCarrageNotice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodAddCarrageNoticeReturnTransport.aspx.cs">
-      <DependentUpon>TruckMethodAddCarrageNoticeReturnTransport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodAddCarrageNoticeReturnTransport.aspx.designer.cs">
-      <DependentUpon>TruckMethodAddCarrageNoticeReturnTransport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodAddInsurance.aspx.cs">
-      <DependentUpon>TruckMethodAddInsurance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodAddInsurance.aspx.designer.cs">
-      <DependentUpon>TruckMethodAddInsurance.aspx</DependentUpon>
-    </Compile>
     <Compile Include="TruckMethodAddOrder.aspx.cs">
       <DependentUpon>TruckMethodAddOrder.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -661,27 +616,6 @@
     </Compile>
     <Compile Include="TruckMethodAddShipmentSelection.aspx.designer.cs">
       <DependentUpon>TruckMethodAddShipmentSelection.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodEditCarrageNotice.aspx.cs">
-      <DependentUpon>TruckMethodEditCarrageNotice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodEditCarrageNotice.aspx.designer.cs">
-      <DependentUpon>TruckMethodEditCarrageNotice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodEditCarrageNoticeReturnTransport.aspx.cs">
-      <DependentUpon>TruckMethodEditCarrageNoticeReturnTransport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodEditCarrageNoticeReturnTransport.aspx.designer.cs">
-      <DependentUpon>TruckMethodEditCarrageNoticeReturnTransport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodEditInsurance.aspx.cs">
-      <DependentUpon>TruckMethodEditInsurance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodEditInsurance.aspx.designer.cs">
-      <DependentUpon>TruckMethodEditInsurance.aspx</DependentUpon>
     </Compile>
     <Compile Include="TruckMethodEditOrder.aspx.cs">
       <DependentUpon>TruckMethodEditOrder.aspx</DependentUpon>
@@ -717,20 +651,6 @@
     </Compile>
     <Compile Include="TruckMethodViewInsurance.aspx.designer.cs">
       <DependentUpon>TruckMethodViewInsurance.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodViewOrder.aspx.cs">
-      <DependentUpon>TruckMethodViewOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodViewOrder.aspx.designer.cs">
-      <DependentUpon>TruckMethodViewOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TruckMethodViewShipmentSelection.aspx.cs">
-      <DependentUpon>TruckMethodViewShipmentSelection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TruckMethodViewShipmentSelection.aspx.designer.cs">
-      <DependentUpon>TruckMethodViewShipmentSelection.aspx</DependentUpon>
     </Compile>
     <Compile Include="TruckMethodViewTitleInfo.aspx.cs">
       <DependentUpon>TruckMethodViewTitleInfo.aspx</DependentUpon>

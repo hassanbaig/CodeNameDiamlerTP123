@@ -79,7 +79,34 @@ namespace DiamlerTP.DAL
             }
             return AirShipDetailList;
         }
+        public AirShipDetail GetAirShipDetailInfo(int id)
+        {
+            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_AirShipDetail WHERE MBSNo=" + id);
+            DataTable dt = ds.Tables[0];
+            DataRow dr = dt.Rows[0];
 
+            AirShipDetail airShipDetail = new AirShipDetail
+            {
+                ID = Convert.ToInt64(dr["ID"]),
+                MBSNo = dr["MBSNo"].ToString(),
+                FlightDate = Convert.ToDateTime(dr["FlightDate"]),
+                Flight = dr["Flight"].ToString(),
+                AWB = dr["AWB"].ToString(),
+                Shipper = dr["Shipper"].ToString(),
+                ExportKind = dr["ExportKind"].ToString(),
+                TIBCarnetNo = dr["TIBCarnetNo"].ToString(),
+                GoodsKind = dr["GoodsKind"].ToString(),
+                ChassisNo = dr["ChassisNo"].ToString(),
+                ShippmentFromSifi = Convert.ToDateTime(dr["ShippmentFromSifi"]),
+                Arrival = Convert.ToDateTime(dr["Arrival"]),
+                Destination = dr["Destination"].ToString(),
+                ReturnDate = dr["ReturnDate"].ToString(),
+                Client = Convert.ToInt32(dr["Client"]),
+                CustomClearence = dr["CustomClearence"].ToString(),
+                MBSPos = dr["MBSPos"].ToString()
+            };
+            return airShipDetail;
+        }
         public object Add(int orderId, DateTime date, int loadAddress)
         {
             object orderDetailId = 0;
@@ -102,6 +129,18 @@ namespace DiamlerTP.DAL
                 string[] arrValue = { "'" + noOfVehicles + "'" };
 
                 _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_Order", arrColumn, arrValue, orderId));
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+        public void Update(int orderId, string mbsNo, DateTime flightDate, string flight, string awb, string shipper, string exportKind, string tibCarnetNo, string goodsKind, string chassisNo, DateTime shipmentFromSifi, DateTime returnDate, int client, string customClearance)
+        {
+            try
+            {
+                string[] arrColumn = { "MBSNo", "FlightDate", "Flight", "AWB", "Shipper", "ExportKind", "TIBCarnetNo", "GoodsKind", "ChassisNo", "ShippmentFromSifi", "ReturnDate", "Client", "CustomClearence" };
+                string[] arrValue = { "'" + mbsNo + "'", "'" + flightDate + "'", "'" + flight + "'", "'" + awb + "'", "'" + shipper + "'", "'" + exportKind + "'", "'" + tibCarnetNo + "'", "'" + goodsKind + "'", "'" + chassisNo + "'", "'" + shipmentFromSifi + "'", "'" + returnDate.ToShortDateString() + "'", "" + client + "", "'" + customClearance + "'" };
+                _dataProvider.ManipulateData(QueryCreater.UpdateQuery("T_AirShipDetail", arrColumn, arrValue, orderId));
             }
             catch (Exception ex)
             {

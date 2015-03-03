@@ -13,5 +13,15 @@ namespace DiamlerTP
         {
 
         }
+
+        protected void btnCMROpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnViewVehicleList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

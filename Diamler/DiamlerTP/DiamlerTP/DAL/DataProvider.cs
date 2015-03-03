@@ -101,8 +101,18 @@ namespace DiamlerTP.DAL
                 {
                     dr = dt.NewRow();
                     dr["OID"] = rdr["OID"].ToString();
-                    dr["V"] = rdr["V"].ToString();
-                    dr["W"] = rdr["W"].ToString();                
+                    dr["DesFin"] = rdr["DesFin"].ToString();
+                    dr["NumPla"] = rdr["NumPla"].ToString();
+                    dr["ChaNo"] = rdr["ChaNo"].ToString();
+                    dr["Len"] = rdr["Len"].ToString();
+                    dr["Wid"] = rdr["Wid"].ToString();
+                    dr["Hei"] = rdr["Hei"].ToString();
+                    dr["Wei"] = rdr["Wei"].ToString();
+                    dr["Pri"] = rdr["Pri"].ToString();
+                    dr["Rec"] = rdr["Rec"].ToString();
+                    dr["Mod"] = rdr["Mod"].ToString();
+                    dr["TruTyp"] = rdr["TruTyp"].ToString();
+                    dr["TraWay"] = rdr["TraWay"].ToString(); 
                     dt.Rows.Add(dr);
                     dt.AcceptChanges();
                 }
