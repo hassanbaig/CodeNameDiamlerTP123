@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CrystalReportWebApp {
+namespace DiamlerTP {
     
     
     public partial class frmReportViewer {

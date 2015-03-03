@@ -10,7 +10,7 @@
 namespace DiamlerTP {
     
     
-    public partial class frmReportViewer {
+    public partial class ReportViewerForm {
         
         /// <summary>
         /// form1 control.
