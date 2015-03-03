@@ -134,8 +134,8 @@
     <Content Include="CoreDataEditLoadAddress.aspx" />
     <Content Include="CoreDataEditShipment.aspx" />
     <Content Include="CoreDataViewVehicleData.aspx" />
-    <Content Include="CrystalReport\frmReportCall.aspx" />
-    <Content Include="CrystalReport\frmReportViewer.aspx" />
+    <Content Include="frmReportCall.aspx" />
+    <Content Include="frmReportViewer.aspx" />
     <Content Include="EditAdditionalInfo.aspx" />
     <Content Include="EditClient.aspx" />
     <Content Include="EditShipmentContactPerson.aspx" />
@@ -162,6 +162,7 @@
       <DependentUpon>DatasetSP.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ReportViewerForm.aspx" />
     <Content Include="Sachbearbeiter1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -287,12 +288,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CMR.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CMR.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -356,24 +351,24 @@
     <Compile Include="CoreDataViewVehicleData.aspx.designer.cs">
       <DependentUpon>CoreDataViewVehicleData.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport\CMR.cs">
+    <Compile Include="CMR.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CMR.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport\frmReportCall.aspx.cs">
+    <Compile Include="frmReportCall.aspx.cs">
       <DependentUpon>frmReportCall.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CrystalReport\frmReportCall.aspx.designer.cs">
       <DependentUpon>frmReportCall.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport\frmReportViewer.aspx.cs">
+    <Compile Include="frmReportViewer.aspx.cs">
       <DependentUpon>frmReportViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CrystalReport\frmReportViewer.aspx.designer.cs">
+    <Compile Include="frmReportViewer.aspx.designer.cs">
       <DependentUpon>frmReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="CrystalReport\Insurance.cs">
@@ -488,24 +483,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Insurance.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Insurance.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Ladeadresse.aspx.cs">
       <DependentUpon>Ladeadresse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Ladeadresse.aspx.designer.cs">
       <DependentUpon>Ladeadresse.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Layout.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Layout.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Loginuser.aspx.cs">
       <DependentUpon>Loginuser.aspx</DependentUpon>
@@ -542,13 +525,14 @@
       <DependentUpon>OutputEmployeeInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Report1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ReportHelper.cs" />
+    <Compile Include="ReportViewerForm.aspx.cs">
+      <DependentUpon>ReportViewerForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportViewerForm.aspx.designer.cs">
+      <DependentUpon>ReportViewerForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sachbearbeiter1.aspx.cs">
       <DependentUpon>Sachbearbeiter1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -583,18 +567,6 @@
     </Compile>
     <Compile Include="StatisticsViewShipmentOrder.aspx.designer.cs">
       <DependentUpon>StatisticsViewShipmentOrder.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Transport Order Address.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Transport Order Address.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Transport Order Address1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Transport Order Address1.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="TransportAuftragDetails.aspx.cs">
       <DependentUpon>TransportAuftragDetails.aspx</DependentUpon>
@@ -659,12 +631,6 @@
     <Compile Include="TruckMethodViewTitleInfo.aspx.designer.cs">
       <DependentUpon>TruckMethodViewTitleInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TwoWay.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TwoWay.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ViewAdditionalInfo.aspx.cs">
       <DependentUpon>ViewAdditionalInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -688,10 +654,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CMR.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport\CMR.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CMR.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport\Insurance.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Insurance.cs</LastGenOutput>
@@ -704,33 +666,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transport Order Address.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Insurance.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Insurance.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Layout.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Layout.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="OneWayRequest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>OneWayRequest.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Report1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transport Order Address.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Transport Order Address.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transport Order Address1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Transport Order Address1.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TwoWay.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TwoWay.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
