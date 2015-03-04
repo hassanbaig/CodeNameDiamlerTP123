@@ -29,8 +29,7 @@
         
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
-                <div style="margin:20px;">
-                    <asp:TextBox ID="txtTitleLayout" runat="server"></asp:TextBox>
+                <div style="margin:20px;">         
                     <asp:Button ID="btnOpenTitleInfo" runat="server" Text="Open Title Info" OnClick="btnOpenTitleInfo_Click" />
                 </div>
             </asp:TableCell>                

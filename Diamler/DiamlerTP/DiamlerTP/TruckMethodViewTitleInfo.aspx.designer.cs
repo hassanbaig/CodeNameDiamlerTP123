@@ -31,15 +31,6 @@ namespace DiamlerTP {
         protected global::System.Web.UI.WebControls.DropDownList ddlOrder;
         
         /// <summary>
-        /// txtTitleLayout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitleLayout;
-        
-        /// <summary>
         /// btnOpenTitleInfo control.
         /// </summary>
         /// <remarks>

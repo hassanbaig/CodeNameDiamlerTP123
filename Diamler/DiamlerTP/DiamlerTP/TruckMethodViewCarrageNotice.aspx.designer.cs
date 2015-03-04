@@ -40,15 +40,6 @@ namespace DiamlerTP {
         protected global::System.Web.UI.WebControls.DropDownList ddlShipment;
         
         /// <summary>
-        /// txtCMR control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMR;
-        
-        /// <summary>
         /// btnCMROpen control.
         /// </summary>
         /// <remarks>
@@ -74,5 +65,14 @@ namespace DiamlerTP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// SqlDataSourceForOrder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceForOrder;
     }
 }

@@ -42,8 +42,7 @@
 
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
-                <div>
-                    <asp:TextBox ID="txtCMR" runat="server"></asp:TextBox>
+                <div>                   
                     <asp:Button ID="btnCMROpen" runat="server" Text="CMR Open" OnClick="btnCMROpen_Click"/>
                 </div>
             </asp:TableCell>                        
@@ -73,4 +72,5 @@
             </asp:TableCell>            
         </asp:TableRow>
         </asp:Table>
+    <asp:SqlDataSource ID="SqlDataSourceForOrder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Order] Order By [ID] DESC"></asp:SqlDataSource>
 </asp:Content>

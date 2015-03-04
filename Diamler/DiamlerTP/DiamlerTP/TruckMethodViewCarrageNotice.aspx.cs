@@ -16,7 +16,7 @@ namespace DiamlerTP
 
         protected void btnCMROpen_Click(object sender, EventArgs e)
         {
-            string textVal = txtCMR.Text;
+            string textVal = ddlOrder.Text;
             Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 6);
         }
     }
