@@ -14,7 +14,11 @@ namespace DiamlerTP.DAL
         {
             _dataProvider = new DataProvider();
         }
+        public int GetPriceSum(int id)
+        {
+            return _dataProvider.GetPriceSum(id);
 
+        }
         public OrderDetails GetOrderDetails(int id)
         {
             DataSet ds = _dataProvider.GetData(QueryCreater.SelectQuery("T_OrderDetails", null, "Id=" + id));

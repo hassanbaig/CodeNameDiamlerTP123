@@ -61,6 +61,25 @@ namespace DiamlerTP.DAL
             return ClientList;
         }
 
+        public Client GetClientInfo(int id)
+        {
+            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_Client WHERE ID=" + id);
+            DataTable dt = ds.Tables[0];
+            DataRow dr = dt.Rows[0];
+
+            Client client = new Client
+            {
+                ID = Convert.ToInt32(dr["ID"]),
+                Title = Convert.ToInt32(dr["Title"].ToString()),
+                FName = dr["FName"].ToString(),
+                LName = dr["LName"].ToString(),
+                Department = dr["Department"].ToString(),
+                Tel = dr["Tel"].ToString(),
+                IndustrialPlant = dr["IndustrialPlant"].ToString()
+            };
+            return client;
+        }
+
         public int GetCount()
         {
             DataSet ds = _dataProvider.GetData(QueryCreater.SelectQuery("T_Client", new[] { "Max(id) AS count" }));

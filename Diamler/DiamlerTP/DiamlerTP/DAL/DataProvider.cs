@@ -65,6 +65,19 @@ namespace DiamlerTP.DAL
                 return ID;
             }
         }
+        public int GetPriceSum(int Id)
+        {
+            int result = 0;
+            string commandString = "SELECT SUM(Price) FROM T_OrderDetails WHERE OrderID = " + Id;
+            using (SqlCommand cmd = new SqlCommand(commandString, _sqlConnection))
+            {
+                if (_sqlConnection.State == ConnectionState.Open)
+                { Close(); }
+                Open();
+                result = (int)cmd.ExecuteScalar();         
+            }
+           return result;
+        }
 
         public DataTable GetOrderDetails(long orderId)
         {

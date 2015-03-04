@@ -16,14 +16,14 @@ namespace DiamlerTP {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CMR : ReportClass {
+    public class Transport_Order_Address1 : ReportClass {
         
-        public CMR() {
+        public Transport_Order_Address1() {
         }
         
         public override string ResourceName {
             get {
-                return "CMR.rpt";
+                return "Transport Order Address1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace DiamlerTP {
         
         public override string FullResourceName {
             get {
-                return "DiamlerTP.CMR.rpt";
+                return "DiamlerTP.Transport Order Address1.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace DiamlerTP {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCMR : Component, ICachedReport {
+    public class CachedTransport_Order_Address1 : Component, ICachedReport {
         
-        public CachedCMR() {
+        public CachedTransport_Order_Address1() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace DiamlerTP {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CMR rpt = new CMR();
+            Transport_Order_Address1 rpt = new Transport_Order_Address1();
             rpt.Site = this.Site;
             return rpt;
         }

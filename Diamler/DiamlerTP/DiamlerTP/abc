@@ -1,18 +1,16 @@
-﻿using System;
+﻿using DiamlerTP.CrystalReport;
+using DiamlerTP.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TestReportWebApp;
-using DiamlerTP.DAL;
-using DiamlerTP.CrystalReport;
 
 namespace DiamlerTP
 {
-    public partial class frmReportViewer : System.Web.UI.Page
+    public partial class ReportViewerForm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,7 +46,7 @@ namespace DiamlerTP
                     creport2.SetDataSource(dview);
                     CrystalReportViewer1.ReportSource = creport2;
                     CrystalReportViewer1.DataBind();
-                    break; 
+                    break;
 
                 case "3":
                     ds = obj.RunSP("Title_Laout", IDVal);
@@ -71,7 +69,7 @@ namespace DiamlerTP
                 case "5":
                     ds = obj.RunSP("Transport_Order", IDVal);
                     dview.Table = ds.Tables[0];
-                    Transport_Order_Address creport5 = new Transport_Order_Address();                  
+                    Transport_Order_Address creport5 = new Transport_Order_Address();
                     creport5.SetDataSource(dview);
                     CrystalReportViewer1.ReportSource = creport5;
                     CrystalReportViewer1.DataBind();
@@ -80,7 +78,7 @@ namespace DiamlerTP
                 case "6":
                     ds = obj.RunSP("CMR_SP", IDVal);
                     dview.Table = ds.Tables[0];
-                    CMR creport6 = new CMR();                    
+                    CMR creport6 = new CMR();
                     creport6.SetDataSource(dview);
                     CrystalReportViewer1.ReportSource = creport6;
                     CrystalReportViewer1.DataBind();
@@ -91,5 +89,6 @@ namespace DiamlerTP
             }
 
         }
+
     }
 }

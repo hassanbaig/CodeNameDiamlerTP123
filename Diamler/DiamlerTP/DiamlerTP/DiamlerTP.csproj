@@ -134,13 +134,12 @@
     <Content Include="CoreDataEditLoadAddress.aspx" />
     <Content Include="CoreDataEditShipment.aspx" />
     <Content Include="CoreDataViewVehicleData.aspx" />
-    <Content Include="frmReportCall.aspx" />
-    <Content Include="frmReportViewer.aspx" />
     <Content Include="EditAdditionalInfo.aspx" />
     <Content Include="EditClient.aspx" />
     <Content Include="EditShipmentContactPerson.aspx" />
     <Content Include="EditShipmentVehicle.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmReportCall.aspx" />
     <Content Include="Ladeadresse.aspx" />
     <Content Include="Loginuser.aspx" />
     <Content Include="NeuAuftrag.aspx" />
@@ -351,25 +350,11 @@
     <Compile Include="CoreDataViewVehicleData.aspx.designer.cs">
       <DependentUpon>CoreDataViewVehicleData.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CMR.cs">
+    <Compile Include="CrystalReport\CMR.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CMR.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="frmReportCall.aspx.cs">
-      <DependentUpon>frmReportCall.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CrystalReport\frmReportCall.aspx.designer.cs">
-      <DependentUpon>frmReportCall.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportViewer.aspx.cs">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmReportViewer.aspx.designer.cs">
-      <DependentUpon>frmReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="CrystalReport\Insurance.cs">
       <AutoGen>True</AutoGen>
@@ -479,6 +464,13 @@
     </Compile>
     <Compile Include="EditShipmentVehicle.aspx.designer.cs">
       <DependentUpon>EditShipmentVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCall.aspx.cs">
+      <DependentUpon>frmReportCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReportCall.aspx.designer.cs">
+      <DependentUpon>frmReportCall.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -650,7 +642,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CMR.rpt">
+    <EmbeddedResource Include="CrystalReport\CMR.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CMR.cs</LastGenOutput>
     </EmbeddedResource>

@@ -133,7 +133,7 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                    <asp:TextBox ID="txtIndustrialPlant" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    <asp:DropDownList ID="ddlIndustrialPlant" runat="server"></asp:DropDownList>                    
                 </div>
             </asp:TableCell>
         </asp:TableRow>
