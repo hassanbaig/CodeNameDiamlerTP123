@@ -72,3 +72,4 @@ C:\Users\HASSAN\Documents\GitHub\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerT
 C:\Users\HASSAN\Documents\GitHub\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.pdb
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.csprojResolveAssemblyReference.cache
 C:\Users\HASSAN\Documents\GitHub\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.csprojResolveAssemblyReference.cache
+D:\TeamFoundation\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.csprojResolveAssemblyReference.cache
