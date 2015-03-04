@@ -29,13 +29,20 @@ namespace DiamlerTP
         private void fillCombos()
         {
             ddlDepartment.Items.Clear();
+            ddlIndustrialPlant.Items.Clear();
             ddlType.Items.Clear();
             List<string> departments = new List<string>();
+            List<string> industrialPlants = new List<string>();
             List<string> types = new List<string>();
 
-            departments.Add("MTC");
-            departments.Add("Marketing Vertrieb");
-            departments.Add("W50 Diverse");
+            departments.Add("PK/AF2");
+            departments.Add("MS/M");
+            departments.Add("EP/STD/Ep/Gee/");
+
+            industrialPlants.Add("MTC");
+            industrialPlants.Add("Marketing Vertrieb");
+            industrialPlants.Add("W50 Diverse");
+            
 
             types.Add("Auftraggeber");
             types.Add("Belader");
@@ -43,6 +50,7 @@ namespace DiamlerTP
             types.Add("Fahrer");
 
             ddlDepartment.DataSource = departments;
+            ddlIndustrialPlant.DataSource = industrialPlants;
             ddlType.DataSource = types;
         }
         private void ClearControls()
@@ -63,14 +71,14 @@ namespace DiamlerTP
             txtTel.Text = "";
             txtMobile.Text = "";
             ddlType.SelectedIndex = 0;
-            txtIndustrialPlant.Text = "";            
+            ddlIndustrialPlant.SelectedIndex = 0;            
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
             object loadAddressId = loadAdressDataProvider.Add(txtSearchName.Text, txtName1.Text, txtName2.Text, txtStreet1.Text, txtStreet2.Text, txtPostCode.Text, txtCity.Text, txtRegion.Text, ddlCountry.SelectedValue);
             if (loadAddressId != null)
             {                
-                contactPersonDataProvider.Add(Convert.ToInt32(loadAddressId),Convert.ToInt32(ddlTitle.SelectedValue),txtFirstName.Text,txtLastName.Text,ddlDepartment.SelectedValue,txtTel.Text,txtMobile.Text,ddlType.SelectedValue,txtIndustrialPlant.Text);
+                contactPersonDataProvider.Add(Convert.ToInt32(loadAddressId),Convert.ToInt32(ddlTitle.SelectedValue),txtFirstName.Text,txtLastName.Text,ddlDepartment.SelectedValue,txtTel.Text,txtMobile.Text,ddlType.SelectedValue,ddlIndustrialPlant.SelectedValue);
                 ClearControls();
                 lblResponseMessage.Text = "Record has been added successfully. New ID is " + loadAddressId;
             }

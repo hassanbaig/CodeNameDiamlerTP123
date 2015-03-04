@@ -90,6 +90,35 @@ namespace DiamlerTP.DAL
                 return order;
         }
 
+        public List<Order> GetOrderInfo(int orderId, DateTime date)
+        {
+            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_Order WHERE ID =" + orderId + " AND EntryDate = '" + date + "'");
+            DataTable dt = ds.Tables[0];            
+            List<Order> orderList = new List<Order>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Order order = new Order
+                {
+                    Id = Convert.ToInt64(dr["ID"]),
+                    EntryDate = DateTime.Parse(dr["EntryDate"].ToString()),
+                    EmployeeInfo = Convert.ToInt32(dr["EmployeeInfo"]),
+                    ShippingMethod = Convert.ToInt32(dr["ShippingMethod"]),
+                    MainReceipt = dr["MainReceipt"].ToString(),
+                    AdditionalInformatio = dr["AdditionalInformation"].ToString(),
+                    Client = Convert.ToInt32(dr["Client"]),
+                    SpecialInstruction = dr["SpecialInstruction"].ToString(),
+                    DestinationPrice = dr["DestinationPrice"].ToString(),
+                    ReturnPrice = dr["ReturnPrice"].ToString(),
+                    VechicleNo = dr["VechicleNo"].ToString(),
+                    InternalInfo = dr["InternalInfo"].ToString(),
+                    ReceiptInfo = dr["ReceiptInfo"].ToString(),
+                    Tender = DateTime.Parse(dr["Tender"].ToString())
+                };
+                orderList.Add(order);
+            }
+            return orderList;
+        }
+
         public List<Order> GetOrdersByRange(int pageNo = 1, int pageSize = 20)
         {
             string limitQuery = QueryCreater.SelectPagingQuery("T_Order", pageNo, pageSize);
