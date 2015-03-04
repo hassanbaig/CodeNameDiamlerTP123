@@ -14,17 +14,15 @@
         </asp:TableHeaderRow>
         
         
-        <asp:TableRow CssClass="form-group">
-            
-            <asp:TableCell>
-                
+      <asp:TableRow CssClass="form-group">            
+            <asp:TableCell>                
                 <div style="margin:20px;">
                 Order Id:
                 </div>
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                 <asp:DropDownList ID="ddlOrder" AutoPostBack="true" runat="server" DataSourceID="SqlDataSourceForOrder" DataTextField="ID" DataValueField="ID" OnSelectedIndexChanged="ddlOrder_SelectedIndexChanged"></asp:DropDownList>                                            
                 </div>
             </asp:TableCell>
         </asp:TableRow>
@@ -39,7 +37,7 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtInsurance" runat="server"></asp:TextBox>
                 </div>
             </asp:TableCell>
         </asp:TableRow>
@@ -53,7 +51,7 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                    <asp:DropDownList ID="DropDownList2" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlShipment" runat="server" DataSourceID="SqlDataSourceForShipment" DataTextField="SearchName" DataValueField="ID" ></asp:DropDownList>                                            
                 </div>
             </asp:TableCell>            
         </asp:TableRow>
@@ -61,7 +59,7 @@
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
                 <div>
-                    <asp:Button ID="Button4" runat="server" Text="Insured" />
+                    <asp:Button ID="Button4" runat="server" Text="Insured" OnClick="Button4_Click" />
                 </div>
             </asp:TableCell>   
              <asp:TableCell>
@@ -88,4 +86,7 @@
         </asp:TableRow>
 
         </asp:Table>
+
+    <asp:SqlDataSource ID="SqlDataSourceForOrder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Order] Order By [ID] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceForShipment" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Shippment] Order By [ID] DESC"></asp:SqlDataSource>
 </asp:Content>

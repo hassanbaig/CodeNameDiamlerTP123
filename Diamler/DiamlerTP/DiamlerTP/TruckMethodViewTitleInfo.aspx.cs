@@ -16,7 +16,7 @@ namespace DiamlerTP
 
         protected void btnOpenTitleInfo_Click(object sender, EventArgs e)
         {
-            string textVal = txtTitleLayout.Text;
+            string textVal = ddlOrder.SelectedValue;
             Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 3);
         }
     }

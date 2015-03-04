@@ -63,7 +63,32 @@ namespace DiamlerTP.DAL
             }
             return null;
         }
+        public Order GetInsurance(int id)
+        {
+            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_Order WHERE ID=" + id);
+            DataTable dt = ds.Tables[0];
+            DataRow dr = dt.Rows[0];
 
+            Order order = new Order
+            {
+                Id = Convert.ToInt64(dr["ID"]),
+                EntryDate = DateTime.Parse(dr["EntryDate"].ToString()),
+                EmployeeInfo = Convert.ToInt32(dr["EmployeeInfo"]),
+                ShippingMethod = Convert.ToInt32(dr["ShippingMethod"]),
+                MainReceipt = dr["MainReceipt"].ToString(),
+                AdditionalInformatio = dr["AdditionalInformation"].ToString(),
+                Client = Convert.ToInt32(dr["Client"]),
+                SpecialInstruction = dr["SpecialInstruction"].ToString(),
+                DestinationPrice = dr["DestinationPrice"].ToString(),
+                ReturnPrice = dr["ReturnPrice"].ToString(),
+                VechicleNo = dr["VechicleNo"].ToString(),
+                InternalInfo = dr["InternalInfo"].ToString(),
+                Insurance = dr["Insurance"].ToString(),
+                ReceiptInfo = dr["ReceiptInfo"].ToString(),
+                Tender = DateTime.Parse(dr["Tender"].ToString())
+            };
+            return order;
+        }
         public Order GetOrderInfo(int id)
         {
             DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_Order WHERE ID=" + id);
