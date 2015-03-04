@@ -69,6 +69,6 @@ E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\bin\Sy
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\bin\Antlr3.Runtime.pdb
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\bin\Newtonsoft.Json.xml
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\bin\Microsoft.AspNet.FriendlyUrls.xml
-E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.csprojResolveAssemblyReference.cache
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.dll
 E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.pdb
+E:\Zeeshan\GiTHUBDiamler\CodeNameDiamlerTP123\Diamler\DiamlerTP\DiamlerTP\obj\Debug\DiamlerTP.csprojResolveAssemblyReference.cache

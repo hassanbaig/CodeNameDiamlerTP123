@@ -16,10 +16,16 @@ namespace DiamlerTP
 
         protected void btnCMROpen_Click(object sender, EventArgs e)
         {
-
+            string textVal = txtCMR.Text;
+            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 6);
         }
 
         protected void btnViewVehicleList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
