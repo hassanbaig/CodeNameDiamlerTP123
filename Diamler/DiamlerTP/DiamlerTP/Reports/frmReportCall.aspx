@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frm1ReportCall.aspx.cs" Inherits="DiamlerTP.frm1ReportCall" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmReportCall.aspx.cs" Inherits="CrystalReportWebApp.frmReportCall" %>
 
 <!DOCTYPE html>
 
@@ -6,9 +6,9 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="height: 817px">
     <form id="form1" runat="server">
-        <div style="height: 794px">
+    <div style="height: 794px">
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
@@ -19,7 +19,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
 &nbsp;<asp:Label ID="lblOneWay" runat="server" Text="One Way Report"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;
-       
         <asp:TextBox ID="txtFR1way" runat="server"></asp:TextBox>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
