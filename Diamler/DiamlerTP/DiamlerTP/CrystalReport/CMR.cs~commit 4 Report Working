@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CrystalReportWebApp.Reports {
+namespace DiamlerTP.CrystalReport {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace CrystalReportWebApp.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Layout : ReportClass {
+    public class CMR : ReportClass {
         
-        public Layout() {
+        public CMR() {
         }
         
         public override string ResourceName {
             get {
-                return "Layout.rpt";
+                return "CMR.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace CrystalReportWebApp.Reports {
         
         public override string FullResourceName {
             get {
-                return "CrystalReportWebApp.Reports.Layout.rpt";
+                return "DiamlerTP.CrystalReport.CMR.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace CrystalReportWebApp.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedLayout : Component, ICachedReport {
+    public class CachedCMR : Component, ICachedReport {
         
-        public CachedLayout() {
+        public CachedCMR() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace CrystalReportWebApp.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Layout rpt = new Layout();
+            CMR rpt = new CMR();
             rpt.Site = this.Site;
             return rpt;
         }
