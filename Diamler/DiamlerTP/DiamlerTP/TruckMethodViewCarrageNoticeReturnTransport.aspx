@@ -43,6 +43,7 @@
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
                 <div>
+                    <asp:TextBox ID="txtCMR" runat="server"></asp:TextBox>
                     <asp:Button ID="btnCMROpen" runat="server" Text="CMR Open" OnClick="btnCMROpen_Click"/>
                 </div>
             </asp:TableCell>                        

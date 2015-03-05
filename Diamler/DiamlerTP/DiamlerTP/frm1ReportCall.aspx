@@ -19,6 +19,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
 &nbsp;<asp:Label ID="lblOneWay" runat="server" Text="One Way Report"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;
+       
         <asp:TextBox ID="txtFR1way" runat="server"></asp:TextBox>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

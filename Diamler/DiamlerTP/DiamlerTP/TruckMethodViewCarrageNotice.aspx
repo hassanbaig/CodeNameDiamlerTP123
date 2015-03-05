@@ -42,7 +42,7 @@
 
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
-                <div>
+                <div>                   
                     <asp:Button ID="btnCMROpen" runat="server" Text="CMR Open" OnClick="btnCMROpen_Click"/>
                 </div>
             </asp:TableCell>                        
@@ -51,7 +51,7 @@
         <asp:TableRow CssClass="form-group">
             <asp:TableCell>
                 <div style="margin:20px;">
-                    <asp:Button ID="btnViewVehicleList" runat="server" Text="View Vehicle List" OnClick="btnViewVehicleList_Click"/>
+                    <asp:Button ID="btnViewVehicleList" runat="server" Text="View Vehicle List"/>
                 </div>
             </asp:TableCell>               
         </asp:TableRow>
@@ -71,7 +71,6 @@
                 </div>
             </asp:TableCell>            
         </asp:TableRow>
-     
-
         </asp:Table>
+    <asp:SqlDataSource ID="SqlDataSourceForOrder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Order] Order By [ID] DESC"></asp:SqlDataSource>
 </asp:Content>

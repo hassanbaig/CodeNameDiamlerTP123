@@ -52,7 +52,8 @@ namespace DiamlerTP
 
         protected void btnTransportOrderAddressDifferent_Click(object sender, EventArgs e)
         {
-
+            string textVal = txtTransportOrdReq.Text;
+            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 5);
         }
 
         protected void btnTransportOrderAddressOneWay_Click(object sender, EventArgs e)

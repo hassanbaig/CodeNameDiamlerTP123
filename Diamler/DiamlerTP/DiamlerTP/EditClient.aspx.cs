@@ -29,13 +29,20 @@ namespace DiamlerTP
         private void fillCombos()
         {
             ddlDepartment.Items.Clear();
+            ddlIndustrialPlant.Items.Clear();
             ddlType.Items.Clear();
             List<string> departments = new List<string>();
+            List<string> industrialPlants = new List<string>();
             List<string> types = new List<string>();
 
-            departments.Add("MTC");
-            departments.Add("Marketing Vertrieb");
-            departments.Add("W50 Diverse");
+            departments.Add("PK/AF2");
+            departments.Add("MS/M");
+            departments.Add("EP/STD/Ep/Gee/");
+
+            industrialPlants.Add("MTC");
+            industrialPlants.Add("Marketing Vertrieb");
+            industrialPlants.Add("W50 Diverse");
+
 
             types.Add("Auftraggeber");
             types.Add("Belader");
@@ -43,6 +50,7 @@ namespace DiamlerTP
             types.Add("Fahrer");
 
             ddlDepartment.DataSource = departments;
+            ddlIndustrialPlant.DataSource = industrialPlants;
             ddlType.DataSource = types;
         }
         private void ClearControls()
@@ -54,12 +62,12 @@ namespace DiamlerTP
             txtTel.Text = "";
             txtMobile.Text = "";
             ddlType.SelectedIndex = 0;
-            txtIndustrialPlant.Text = "";
+            ddlIndustrialPlant.SelectedIndex = 0;
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            object contactPersonId = contactPersonDataProvider.Update(Convert.ToInt32(ddlClient.SelectedValue),Convert.ToInt32(ddlLoadAddress.SelectedValue),Convert.ToInt32(ddlTitle.SelectedValue),txtFirstName.Text,txtLastName.Text,ddlDepartment.SelectedValue,txtTel.Text,txtMobile.Text,ddlType.SelectedValue,txtIndustrialPlant.Text);
+            object contactPersonId = contactPersonDataProvider.Update(Convert.ToInt32(ddlClient.SelectedValue), Convert.ToInt32(ddlLoadAddress.SelectedValue), Convert.ToInt32(ddlTitle.SelectedValue), txtFirstName.Text, txtLastName.Text, ddlDepartment.SelectedValue, txtTel.Text, txtMobile.Text, ddlType.SelectedValue, ddlIndustrialPlant.SelectedValue);
             if (contactPersonId != null)
             {
                 ClearControls();
@@ -81,7 +89,7 @@ namespace DiamlerTP
             txtTel.Text = contactPerson.Tel;
             txtMobile.Text = contactPerson.Mobile;
             ddlType.SelectedValue = contactPerson.Typ.ToString();
-            txtIndustrialPlant.Text = contactPerson.Industrialplant;
+            ddlIndustrialPlant.SelectedValue = contactPerson.Industrialplant;
         }    
     }
 }
