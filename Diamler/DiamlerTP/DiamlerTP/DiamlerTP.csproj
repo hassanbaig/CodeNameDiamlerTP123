@@ -368,22 +368,10 @@
       <DependentUpon>Layout.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReport\OneR.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OneR.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CrystalReport\Transport Order Address.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Transport Order Address.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport\TwoW.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TwoW.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAL\DataProvider.cs" />
@@ -666,17 +654,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Layout.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport\OneR.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>OneR.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReport\Transport Order Address.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transport Order Address.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport\TwoW.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TwoW.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OneWayRequest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

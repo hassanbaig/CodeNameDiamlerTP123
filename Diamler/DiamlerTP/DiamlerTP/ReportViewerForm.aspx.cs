@@ -32,7 +32,7 @@ namespace DiamlerTP
                     ds = obj.RunSP("Forward_Request", IDVal);
 
                     dview.Table = ds.Tables[0];
-                    OneR creport = new OneR();
+                    OneWayRequest creport = new OneWayRequest();
                     creport.SetDataSource(dview);
                     CrystalReportViewer1.ReportSource = creport;
                     CrystalReportViewer1.DataBind();
