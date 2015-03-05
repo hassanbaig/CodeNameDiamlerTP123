@@ -27,8 +27,8 @@ namespace DiamlerTP.DAL
             {
                 OrderDetails OrderDetail = new OrderDetails
                 {
-                    ID = Convert.ToInt64(dataRow["ID"]),
-                    OrderID = Convert.ToInt32(dataRow["OrderID"]),
+                    ID = Convert.ToInt32(dataRow["ID"]),
+                    OrderID = Convert.ToInt64(dataRow["OrderID"]),
                     VehicleType = dataRow["VehicleType"].ToString(),
                     DesignatedFinasNo = dataRow["DesignatedFinasNo"].ToString(),
                     NumberPlate = dataRow["NumberPlate"].ToString(),
@@ -64,8 +64,8 @@ namespace DiamlerTP.DAL
             {
                 OrderDetails orderdetails = new OrderDetails
                 {
-                    ID = Convert.ToInt64(dataRow["ID"]),
-                    OrderID = Convert.ToInt32(dataRow["OrderID"]),
+                    ID = Convert.ToInt32(dataRow["ID"]),
+                    OrderID = Convert.ToInt64(dataRow["OrderID"]),
                     VehicleType = dataRow["VehicleType"].ToString(),
                     DesignatedFinasNo = dataRow["DesignatedFinasNo"].ToString(),
                     NumberPlate = dataRow["NumberPlate"].ToString(),
@@ -82,7 +82,7 @@ namespace DiamlerTP.DAL
                     Capacity = dataRow["Capacity"].ToString(),
                     TruckNumberPlate = dataRow["TruckNumberPlate"].ToString(),
                     Shipping = dataRow["Shipping"].ToString(),
-                    Carnet = dataRow["Carnet"].ToString(),
+                    Carnet = dataRow["Carnet"].ToString()
                 };
                 OrderDetailsList.Add(orderdetails);
             }

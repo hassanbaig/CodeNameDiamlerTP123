@@ -7,9 +7,9 @@ namespace DiamlerTP.DAL
 {
     public class OrderDetails
     {
-        public long ID { get; set; }
+        public int ID { get; set; }
 
-        public int OrderID { get; set; }
+        public long OrderID { get; set; }
 
         public string VehicleType { get; set; }
 
@@ -40,6 +40,7 @@ namespace DiamlerTP.DAL
         public string Capacity { get; set; }
 
         public string TruckNumberPlate { get; set; }
+        public string TruckDriver { get; set; }
 
         public string Shipping { get; set; }
 

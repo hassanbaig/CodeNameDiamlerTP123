@@ -58,13 +58,13 @@ namespace DiamlerTP {
         protected global::System.Web.UI.WebControls.Button btnViewVehicleList;
         
         /// <summary>
-        /// GridView1 control.
+        /// gvVehicleList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvVehicleList;
         
         /// <summary>
         /// SqlDataSourceForOrder control.
@@ -74,5 +74,14 @@ namespace DiamlerTP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceForOrder;
+        
+        /// <summary>
+        /// SqlDataSourceForShipment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceForShipment;
     }
 }

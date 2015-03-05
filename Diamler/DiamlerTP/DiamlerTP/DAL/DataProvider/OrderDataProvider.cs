@@ -115,33 +115,75 @@ namespace DiamlerTP.DAL
                 return order;
         }
 
-        public List<Order> GetOrderInfo(int orderId, DateTime date)
+        public List<OrderDetails> GetOrderInfo(int orderId, DateTime date)
         {
-            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_Order WHERE ID =" + orderId + " AND EntryDate = '" + date + "'");
-            DataTable dt = ds.Tables[0];            
-            List<Order> orderList = new List<Order>();
+            DataSet ds = _dataProvider.GetData(@"SELECT T_Order.ID,T_Order.EntryDate,T_Order.EmployeeInfo,T_Order.ShippingMethod,T_Order.MainReceipt,T_Order.AdditionalInformation,T_Order.Client,T_Order.SpecialInstruction,T_Order.DestinationPrice,T_Order.ReturnPrice,T_Order.VechicleNo,T_Order.InternalInfo,T_Order.ReceiptInfo,T_Order.Tender FROM T_Order INNER JOIN T_OrderDetails ON T_Order.ID = T_OrderDetails.OrderID  WHERE T_Order.ID =" + orderId + " AND T_Order.EntryDate = '" + date + "'");
+            DataTable dt = ds.Tables[0];
+            List<OrderDetails> orderDetailsList = new List<OrderDetails>();
             foreach (DataRow dr in dt.Rows)
             {
-                Order order = new Order
+                OrderDetails order = new OrderDetails
                 {
-                    Id = Convert.ToInt64(dr["ID"]),
-                    EntryDate = DateTime.Parse(dr["EntryDate"].ToString()),
-                    EmployeeInfo = Convert.ToInt32(dr["EmployeeInfo"]),
-                    ShippingMethod = Convert.ToInt32(dr["ShippingMethod"]),
-                    MainReceipt = dr["MainReceipt"].ToString(),
-                    AdditionalInformatio = dr["AdditionalInformation"].ToString(),
-                    Client = Convert.ToInt32(dr["Client"]),
-                    SpecialInstruction = dr["SpecialInstruction"].ToString(),
-                    DestinationPrice = dr["DestinationPrice"].ToString(),
-                    ReturnPrice = dr["ReturnPrice"].ToString(),
-                    VechicleNo = dr["VechicleNo"].ToString(),
-                    InternalInfo = dr["InternalInfo"].ToString(),
-                    ReceiptInfo = dr["ReceiptInfo"].ToString(),
-                    Tender = DateTime.Parse(dr["Tender"].ToString())
+                    ID = Convert.ToInt32(dr["ID"]),
+                    OrderID = Convert.ToInt64(dr["OrderID"]),
+                    VehicleType = dr["VehicleType"].ToString(),
+                    DesignatedFinasNo = dr["DesignatedFinasNo"].ToString(),
+                    NumberPlate = dr["NumberPlate"].ToString(),
+                    ChassisNo = dr["ChassisNo"].ToString(),
+                    Receipt = dr["Receipt"].ToString(),
+                    Length = dr["Length"].ToString(),
+                    Width = dr["Width"].ToString(),
+                    Height = dr["Height"].ToString(),
+                    Weight = dr["Weight"].ToString(),
+                    Price = dr["Price"].ToString(),
+                    TruckType = dr["TruckType"].ToString(),
+                    TransportWay = Convert.ToInt32(dr["TransportWay"].ToString()),
+                    ModelYear = dr["ModelYear"].ToString(),
+                    Capacity = dr["Capacity"].ToString(),
+                    TruckNumberPlate = dr["TruckNumberPlate"].ToString(),
+                    TruckDriver = dr["TruckDriver"].ToString(),
+                    Shipping = dr["Shipping"].ToString(),
+                    Carnet = dr["Carnet"].ToString()
+                    
                 };
-                orderList.Add(order);
+                orderDetailsList.Add(order);
             }
-            return orderList;
+            return orderDetailsList;
+        }
+        public List<OrderDetails> GetOrderDetailsInfo(int orderId)
+        {
+            DataSet ds = _dataProvider.GetData(@"SELECT * FROM T_OrderDetails WHERE OrderID = " + orderId);
+            DataTable dt = ds.Tables[0];
+            List<OrderDetails> orderDetailsList = new List<OrderDetails>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                OrderDetails order = new OrderDetails
+                {
+                    //ID = Convert.ToInt32(dr["ID"]),
+                    //OrderID = Convert.ToInt64(dr["OrderID"]),
+                    //VehicleType = dr["VehicleType"].ToString(),
+                    DesignatedFinasNo = dr["DesignatedFinasNo"].ToString(),
+                    NumberPlate = dr["NumberPlate"].ToString(),
+                    ChassisNo = dr["ChassisNo"].ToString(),
+                    //Receipt = dr["Receipt"].ToString(),
+                    //Length = dr["Length"].ToString(),
+                    //Width = dr["Width"].ToString(),
+                    //Height = dr["Height"].ToString(),
+                    //Weight = dr["Weight"].ToString(),
+                    //Price = dr["Price"].ToString(),
+                    //TruckType = dr["TruckType"].ToString(),
+                    //TransportWay = Convert.ToInt32(dr["TransportWay"].ToString()),
+                    //ModelYear = dr["ModelYear"].ToString(),
+                    //Capacity = dr["Capacity"].ToString(),
+                    //TruckNumberPlate = dr["TruckNumberPlate"].ToString(),
+                    TruckDriver = dr["TruckDriver"].ToString(),
+                    //Shipping = dr["Shipping"].ToString(),
+                    //Carnet = dr["Carnet"].ToString()
+
+                };
+                orderDetailsList.Add(order);
+            }
+            return orderDetailsList;
         }
 
         public List<Order> GetOrdersByRange(int pageNo = 1, int pageSize = 20)
