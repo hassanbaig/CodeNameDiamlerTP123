@@ -34,17 +34,21 @@ namespace DiamlerTP
         }
         protected void btnForwardingRequestSame_Click(object sender, EventArgs e)
         {
-
+            string textVal = ddlOrder.SelectedValue;
+            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 2);
         }
 
         protected void btnForwardingRequestDifferent_Click(object sender, EventArgs e)
         {
-
+            string textVal = ddlOrder.SelectedValue;
+            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 2);
         }
 
         protected void btnForwardingRequestOneWay_Click(object sender, EventArgs e)
         {
 
+            string textVal = ddlOrder.SelectedValue;
+            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 1); 
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

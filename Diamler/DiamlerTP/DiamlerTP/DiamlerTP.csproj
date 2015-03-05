@@ -374,6 +374,12 @@
       <DependentUpon>Transport Order Address.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReport\TwoWayRequest.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwoWayRequest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\DataProvider\LoginDataProvider.cs" />
     <Compile Include="DAL\DataProvider\OrderAdressDataProvider.cs" />
@@ -496,7 +502,7 @@
     <Compile Include="NeuAuftrag.aspx.designer.cs">
       <DependentUpon>NeuAuftrag.aspx</DependentUpon>
     </Compile>
-    <Compile Include="OneWayRequest.cs">
+    <Compile Include="CrystalReport\OneWayRequest.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OneWayRequest.rpt</DependentUpon>
@@ -658,9 +664,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Transport Order Address.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="OneWayRequest.rpt">
+    <EmbeddedResource Include="CrystalReport\OneWayRequest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>OneWayRequest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\TwoWayRequest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TwoWayRequest.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
