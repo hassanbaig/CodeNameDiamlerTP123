@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DiamlerTP {
+namespace DiamlerTP.CrystalReport {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace DiamlerTP {
         
         public override string FullResourceName {
             get {
-                return "DiamlerTP.OneWayRequest.rpt";
+                return "DiamlerTP.CrystalReport.OneWayRequest.rpt";
             }
             set {
                 // Do nothing
