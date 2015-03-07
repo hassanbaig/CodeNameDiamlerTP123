@@ -47,18 +47,17 @@ namespace DiamlerTP
 
         protected void btnTransportOrderAddressSame_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ReportViewerForm.aspx?ID=" + Convert.ToInt32(ddlOrder.SelectedValue) + "&ReportType=" + 2);
         }
 
         protected void btnTransportOrderAddressDifferent_Click(object sender, EventArgs e)
-        {
-            string textVal = txtTransportOrdReq.Text;
-            Response.Redirect("ReportViewerForm.aspx?ID=" + textVal + "&ReportType=" + 5);
+        {            
+            Response.Redirect("ReportViewerForm.aspx?ID=" + Convert.ToInt32(ddlOrder.SelectedValue) + "&ReportType=" + 2);
         }
 
         protected void btnTransportOrderAddressOneWay_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ReportViewerForm.aspx?ID=" + Convert.ToInt32(ddlOrder.SelectedValue) + "&ReportType=" + 1);
         }
 
         protected void btnViewOrderDetails_Click(object sender, EventArgs e)

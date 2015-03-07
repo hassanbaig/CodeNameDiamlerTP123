@@ -102,8 +102,7 @@
                 </div>
             </asp:TableCell>
             <asp:TableCell>
-                <div>
-                    <asp:TextBox ID="txtTransportOrdReq" runat="server"></asp:TextBox>
+                <div>                    
                     <asp:Button ID="btnTransportOrderAddressDifferent" runat="server" Text="Transport Order Address (Different)" OnClick="btnTransportOrderAddressDifferent_Click"/>
                 </div>
             </asp:TableCell>            

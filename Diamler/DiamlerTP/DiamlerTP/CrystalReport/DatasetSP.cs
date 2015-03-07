@@ -1,4 +1,4 @@
-﻿namespace DiamlerTP
+﻿namespace DiamlerTP.CrystalReport
 {
     
     

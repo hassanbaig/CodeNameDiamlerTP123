@@ -22,7 +22,7 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                 <asp:DropDownList ID="ddlOrder" AutoPostBack="true" runat="server" DataSourceID="SqlDataSourceForOrder" DataTextField="ID" DataValueField="ID" OnSelectedIndexChanged="ddlOrder_SelectedIndexChanged"></asp:DropDownList>                                            
+                 <asp:DropDownList ID="ddlOrder" runat="server" DataSourceID="SqlDataSourceForOrder" DataTextField="ID" DataValueField="ID" ></asp:DropDownList>                                            
                 </div>
             </asp:TableCell>
         </asp:TableRow>
@@ -35,14 +35,14 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                    <asp:DropDownList ID="ddlShipment" runat="server" DataSourceID="SqlDataSourceForShipment" DataTextField="SearchName" DataValueField="ID"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlShipment" runat="server"></asp:DropDownList>
                 </div>
             </asp:TableCell>            
         </asp:TableRow>
 
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
-                <div style="margin:20px;">             
+                <div>                   
                     <asp:Button ID="btnCMROpen" runat="server" Text="CMR Open" OnClick="btnCMROpen_Click"/>
                 </div>
             </asp:TableCell>                        
@@ -62,11 +62,15 @@
                 <div style="color:red; background-color:lightgray;"><b>Vehicle List</b></div>
                 <hr/>                
             </asp:TableCell>            
-        </asp:TableRow>                
-               
-        </asp:Table>
+        </asp:TableRow>
 
-      <asp:GridView ID="gvVehicleList" runat="server"></asp:GridView>
+        <asp:TableRow CssClass="form-group">
+            <asp:TableCell>
+                <div style="margin:20px;">
+                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                </div>
+            </asp:TableCell>            
+        </asp:TableRow>
+        </asp:Table>
     <asp:SqlDataSource ID="SqlDataSourceForOrder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Order] Order By [ID] DESC"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSourceForShipment" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Shippment] Order By [ID] DESC"></asp:SqlDataSource>
 </asp:Content>
