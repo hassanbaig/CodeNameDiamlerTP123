@@ -385,6 +385,7 @@
     <Compile Include="DAL\DataProvider\OrderAdressDataProvider.cs" />
     <Compile Include="DAL\Model\Login.cs" />
     <Compile Include="DAL\Model\OrderAdress.cs" />
+    <Compile Include="DAL\Model\VehicleList.cs" />
     <Compile Include="DAL\Model\Status.cs" />
     <Compile Include="DAL\DataProvider\CountryListDataProvider.cs" />
     <Compile Include="DAL\DataProvider\LoadAdressDataProvider.cs" />

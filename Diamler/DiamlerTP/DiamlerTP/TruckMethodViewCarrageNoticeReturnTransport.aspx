@@ -22,7 +22,7 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                 <asp:DropDownList ID="ddlOrder" runat="server" DataSourceID="SqlDataSourceForOrder" DataTextField="ID" DataValueField="ID" ></asp:DropDownList>                                            
+                 <asp:DropDownList ID="ddlOrder" AutoPostBack="true" runat="server" DataSourceID="SqlDataSourceForOrder" DataTextField="ID" DataValueField="ID" OnSelectedIndexChanged="ddlOrder_SelectedIndexChanged" ></asp:DropDownList>                                            
                 </div>
             </asp:TableCell>
         </asp:TableRow>
@@ -35,27 +35,18 @@
             </asp:TableCell>
             <asp:TableCell>
                 <div>
-                    <asp:DropDownList ID="ddlShipment" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlShipment" DataSourceID="SqlDataSourceShipment" DataTextField="SearchName" DataValueField="ID" runat="server"></asp:DropDownList>
                 </div>
             </asp:TableCell>            
         </asp:TableRow>
 
          <asp:TableRow CssClass="form-group">            
             <asp:TableCell>
-                <div>
-                    <asp:TextBox ID="txtCMR" runat="server"></asp:TextBox>
+                <div style="margin:20px;">
                     <asp:Button ID="btnCMROpen" runat="server" Text="CMR Open" OnClick="btnCMROpen_Click"/>
                 </div>
             </asp:TableCell>                        
-        </asp:TableRow>
-    
-        <asp:TableRow CssClass="form-group">
-            <asp:TableCell>
-                <div style="margin:20px;">
-                    <asp:Button ID="btnViewVehicleList" runat="server" Text="View Vehicle List" OnClick="btnViewVehicleList_Click"/>
-                </div>
-            </asp:TableCell>               
-        </asp:TableRow>
+        </asp:TableRow>     
 
       <asp:TableRow CssClass="form-group">
             <asp:TableCell>
@@ -64,15 +55,10 @@
                 <hr/>                
             </asp:TableCell>            
         </asp:TableRow>
-
-        <asp:TableRow CssClass="form-group">
-            <asp:TableCell>
-                <div style="margin:20px;">
-                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-                </div>
-            </asp:TableCell>            
-        </asp:TableRow>
-     
-
+        
         </asp:Table>
+
+    <asp:GridView ID="gvVehicleList" runat="server"></asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSourceShipment" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Shippment] Order By [ID] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceForOrder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [T_Order] Order By [ID] DESC"></asp:SqlDataSource>
 </asp:Content>

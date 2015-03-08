@@ -19,39 +19,24 @@ namespace DiamlerTP.DAL
             return _dataProvider.GetPriceSum(id);
 
         }
-        public OrderDetails GetOrderDetails(int id)
+        public List<VehicleList> GetVehicleList(int id)
         {
-            DataSet ds = _dataProvider.GetData(QueryCreater.SelectQuery("T_OrderDetails", null, "Id=" + id));
+            DataSet ds = _dataProvider.GetData(QueryCreater.SelectQuery("T_OrderDetails", null, "OrderId=" + id));
             DataTable dt = ds.Tables[0];
+            List<VehicleList> vehicleDataList = new List<VehicleList>();
             foreach (DataRow dataRow in dt.Rows)
             {
-                OrderDetails OrderDetail = new OrderDetails
-                {
-                    ID = Convert.ToInt64(dataRow["ID"]),
-                    OrderID = Convert.ToInt32(dataRow["OrderID"]),
-                    VehicleType = dataRow["VehicleType"].ToString(),
+                VehicleList vehicleList = new VehicleList
+                {                    
                     DesignatedFinasNo = dataRow["DesignatedFinasNo"].ToString(),
                     NumberPlate = dataRow["NumberPlate"].ToString(),
                     ChassisNo = dataRow["ChassisNo"].ToString(),
-                    Receipt = dataRow["Receipt"].ToString(),
-                    Length = dataRow["Length"].ToString(),
-                    Width = dataRow["Width"].ToString(),
-                    Height = dataRow["Height"].ToString(),
-                    Weight = dataRow["Weight"].ToString(),
-                    Price = dataRow["Price"].ToString(),
                     TruckType = dataRow["TruckType"].ToString(),
-                    TransportWay = Convert.ToInt32(dataRow["TransportWay"]),
-                    ModelYear = dataRow["ModelYear"].ToString(),
-                    Capacity = dataRow["Capacity"].ToString(),
-                    TruckNumberPlate = dataRow["TruckNumberPlate"].ToString(),
-                    Shipping = dataRow["Shipping"].ToString(),
-                    Carnet = dataRow["Carnet"].ToString(),
-                    
-                    
+                    TruckNumberPlate = dataRow["TruckNumberPlate"].ToString()                   
                 };
-                return OrderDetail;
+                vehicleDataList.Add(vehicleList);
             }
-            return null;
+            return vehicleDataList;
         }
 
         public List<OrderDetails> GetOrdersByRange(int pageNo = 1, int pageSize = 20)

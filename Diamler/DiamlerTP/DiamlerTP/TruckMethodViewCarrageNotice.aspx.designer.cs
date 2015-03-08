@@ -49,22 +49,22 @@ namespace DiamlerTP {
         protected global::System.Web.UI.WebControls.Button btnCMROpen;
         
         /// <summary>
-        /// btnViewVehicleList control.
+        /// gvVehicleList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViewVehicleList;
+        protected global::System.Web.UI.WebControls.GridView gvVehicleList;
         
         /// <summary>
-        /// GridView1 control.
+        /// SqlDataSourceShipment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceShipment;
         
         /// <summary>
         /// SqlDataSourceForOrder control.
